@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="./src/index.css">
     <link rel="stylesheet" href="./src/header.css">
     <link rel="stylesheet" href="./src/hero.css">
+    <link rel="stylesheet" href="./src/myservices.css">
+
   </head>
   <body>
     <header class="header">
       <nav class="nav-list">
+        <div class="JTipan"><b>.JTIPANDEV</b></div>
         <ul class="navlist-ul" id="nav_btn">
+          <div class="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+          </div>
           <li class="navlist-item nav-item1"><a href="#About-me">About</a></li>
-          <li class="navlist-item nav-item2"><a href="#Projects">Projects</a></li>
+          <li class="navlist-item nav-item2"><a href="#My Services">My Services</a></li>
           <li class="navlist-item nav-item3"><a href="#Contact">Contact</a></li>
         </ul>
       </nav>
@@ -21,7 +27,13 @@
     <main>
       <section id="About-me" class="hero-section">
         <div class="hero-container">
-          <img src="public/profile.svg" alt="">
+          <div class="img">
+            <div class="line1 line"></div>
+            <div class="line2 line"></div>
+            <img src="public/profile.svg" alt="">
+            <div class="line3 line"></div>
+            <div class="line4 line"></div>
+          </div>
           <div class="about-me-container">
             <h2>Hi! My Name Is Joshua Malonzo. Tipan,</h2>
             <p>Im a good person who loves to code, and i'm good at these ↓</p>
@@ -48,13 +60,29 @@
           </div>
         </div>
       </section>
-      <section id="Projects">
-
+      <section id="My Services" class="My-services">
+        <div class="h2">
+          <h2>My Services</h2>
+        </div>
+        <div class="services-container">
+          <div class="front-end">
+            <h2>Front end</h2>
+            <p><b>User Interface (UI) Development:</b> Creating intuitive, engaging, and modern user interfaces.</p>
+            <p><b>Responsive Web Design:</b>Ensuring applications look and function perfectly across all devices (desktops, tablets, and mobiles).</p>
+          </div>
+          <div class="back-end">
+            <h2>Back end</h2>
+            <p><b>API Development & Integration:</b>Building secure and scalable application programming interfaces.</p>
+            <p><b>Server-Side Logic:</b>Developing the core business logic and functionality of the application.</p>
+            <p><b>Authentication & Security:</b>Implementing robust user authentication and data protection mechanisms.</p>
+          </div>
+        </div>
       </section>
       <section id="Contact">
 
       </section>
     </main>
     <script src="./src/script.js"></script>
+  
   </body>
 </html>

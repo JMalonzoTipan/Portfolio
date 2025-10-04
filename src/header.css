@@ -1,5 +1,4 @@
 
-
 .navlist-ul{
     width: 40px;
     height: 40px;
@@ -8,11 +7,17 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    background-color: var(--secondary-color);
     border-radius: 50%;
     right: 0;
     transition: 0.5s;
     z-index: 2;
+}
+.JTipan{
+    position: fixed;
+    z-index: 99;
+    padding: 10px;
+    left: 0;
+    color: var(--accent-color);
 }
 .navlist-item{
     margin-top: 10px;
@@ -68,6 +73,9 @@
         margin-top: 0;
         padding: 10px 0 10px 0;
     }
+    .burger{
+        display: none;
+    }
     .navlist-item{
         position: relative;
         pointer-events: all;
@@ -88,6 +96,11 @@
     }
 }
 
+@media all and (min-width: 1024px){
+    .navlist-ul{
+        margin-right: 10%;
+    }
+}
 @keyframes initialAnimationNav {
     from{
         transform: translateY(-200px);

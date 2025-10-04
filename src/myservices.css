@@ -1,0 +1,42 @@
+.My-services{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 1fr;
+}
+
+.My-services > .h2{
+    align-self: center;
+    justify-self: center;
+}
+
+.services-container{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.front-end{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.back-end{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.services-container :nth-child(1n) :not(h2, b){
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media all and (min-width: 640px) {
+    .services-container{
+        flex-direction: row;
+    }
+}

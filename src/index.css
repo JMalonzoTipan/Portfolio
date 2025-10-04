@@ -11,8 +11,8 @@ html{
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     --bg-color: #ffffff;
-    --secondary-color: #656569;
-    --accent-color: #ffe600;
+    --secondary-color: #474554;
+    --accent-color: #ff00e9;
     --font-color: #000000;
 }
 a{
@@ -37,8 +37,11 @@ main{
     transition: 0.5s;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    color: var(--font-color);
 }
-
+li{
+    text-align: center;
+}
 
 /* screen sizes */
 

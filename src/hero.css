@@ -5,26 +5,67 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     position: relative;
     bottom: 40px;
     z-index: 1;
 }
 
-.hero-container > img{
+.img{
     width: 70%;
     height: 40%;
-    border-radius: 30px;
+
+    display: grid;
+    grid-template-columns: 4% 1fr 4%;
+    grid-template-rows: 5% 1fr 5%;
+}
+.line{
+    background-color: var(--accent-color);
+}
+.line1{
+    grid-column: span 3;
+    width: 50%;
+    transform: translateX(-300%);
+    animation: sideLines 0.5s forwards;
+    opacity: 0;
+}
+.line2{
+    grid-row: span 2;
+    height: 50%;
+    transform: translateY(300%);
+    opacity: 0;
+    animation: sideLines 2s forwards;
+}
+.line3{
+    grid-row: span 2;
+    height: 60%;
+    align-self:self-end;
+    transform: translateY(-300%);
+    animation: sideLines 1s forwards;
+    opacity: 0;
+}
+.line4{
+    width: 60%;
+    justify-self: end;
+    transform: translateX(300%);
+    animation: sideLines 1.5s forwards;
+    opacity: 0;
+}
+
+.img > img{
     background-color: var(--secondary-color);
     animation: initialAnimationProfile 0.7s forwards;
-}              
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
 .about-me-container{
     margin: 20px;
     text-align: center;
     color: var(--font-color);
     text-wrap: balance;
 }
-.about-me-container > h2{
+.about-me-container > h2 {
     animation: initialAnimationBoutMe 0.5s;
 } 
 .about-me-container > p{
@@ -74,5 +115,12 @@
 @media all and (min-width: 640px) {
     .hero-container{
         flex-direction: row;
+    }
+}
+
+@keyframes sideLines {
+    to{
+        transform: translate(0);
+        opacity: 1;
     }
 }
