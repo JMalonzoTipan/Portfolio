@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joshua's PORTFOLIO</title>
+
     <link rel="stylesheet" href="./src/index.css">
     <link rel="stylesheet" href="./src/header.css">
     <link rel="stylesheet" href="./src/hero.css">
@@ -80,18 +81,29 @@
         </div>
       </section>
       <section id="Contact">
+        <section class="gmail-container">
+          <div class="email-logo-container">
+            <img class="email" src="./public/gmail.png" alt="">
+            <div class="connector"></div>
+          </div>
+          
+          <form id="form" action="https://api.web3forms.com/submit" method="POST" target="_blank">
+            
+            <input type="hidden" name="access_key" value="493ed16a-e959-4848-b24f-5e27bf68767d">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="G-mail" required>
+            <input type="text" name="Company name" placeholder="Company Name" required>
+            <textarea class="mess" name="message" placeholder="message" required></textarea>
+            <button id="submit-btn" type="submit" value="">
+              <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal-icon lucide-send-horizontal"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"/><path d="M6 12h16"/></svg>
+            </button>
+           
+          </form>
+        </section>
         <section class="logo-container">
+          <h4>Other Contacts</h4>
           <a href="https://github.com/JMalonzoTipan?tab=repositories" target="_blank"><img src="./public/github.png" alt="github"></a>
           <a href="https://www.facebook.com/joshua.tipan.9" target="_blank"><img src="./public/facebook.png" alt="facebook"></a>
-        </section>
-        <section class="gmail-container">
-          <form id="form" action="">
-            <input type="email" placeholder="G-mail">
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Company Name">
-            <input type="text" placeholder="Message">
-            <input id="submit-btn" type="submit">
-          </form>
         </section>
       </section>
     </main>

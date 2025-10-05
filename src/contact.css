@@ -1,19 +1,24 @@
 #Contact{
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 15% 1fr;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
 }
 
 .logo-container{
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    justify-content:end;
     align-items: center;
     gap: 20px;
 }
 
-#Contact img{
+.logo-container > :first-child{
+    border-bottom: 1px solid var(--accent-color);
+}
+.logo-container img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -22,15 +27,18 @@
 .gmail-container{
     align-self: center;
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 .gmail-container > form{
+    position: relative;
     width: 90%;
-    height: 70%;
+    height: 100%;
     border-radius: 20px;
+    border: 5px solid var(--accent-color);
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
@@ -39,18 +47,73 @@
     padding: 10px;
     gap: 10px;
 }
-input{
+.gmail-container > form > input{
     display: inline-block;
     width: 80%;
     height: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
 }
+.mess{
+    width: 80%;
+    height: 100px;
+    text-align: center;
+    resize: vertical;
+}
+
 #submit-btn{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    background-color: var(--secondary-color);
+    width: fit-content;
+    height: fit-content;
     border-style: none;
     transition: 0.5s;
+    color: var(--accent-color);
+}
+.arrow-right{
+    width: 50px;
+    height: 50px;
 }
 #submit-btn:hover{
-    background-color: var(--accent-color);
+    transform: translateX(50%);
+}
+.email-logo-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.email{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    z-index: 101;
+}
+.connector{
+    width: 100px;
+    height: 20px;
+    flex-grow: 0;
+    background-color: black;
+    position: absolute;
+    z-index: 100;
+    border: 5px solid rgb(253, 2, 253);
+    border-radius: 5px;
+}
+@media all and (min-width: 640px) {
+    .gmail-container > form{
+        max-width: 600px;
+    }
+    .gmail-container > form > input{
+        height: 30px;
+    }
+    #Contact{
+        flex-direction: row;
+    }
+    .email{
+        width: 100px;
+        height: 100px;
+    }
+    .connector{
+        width: 130px;
+    }
 }

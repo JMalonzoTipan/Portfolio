@@ -25,12 +25,11 @@
     overflow-x: hidden;
 }
 .services-container p{
-    border: 1px solid black;
+    border: 1px solid var(--accent-color);
     padding: 10px;
     border-radius: 10px;
     transition: 0.5s;
 }
-
 
 .front-end{
     display: flex;
