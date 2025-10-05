@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Joshua's PORTFOLIO</title>
     <link rel="stylesheet" href="./src/index.css">
     <link rel="stylesheet" href="./src/header.css">
     <link rel="stylesheet" href="./src/hero.css">
     <link rel="stylesheet" href="./src/myservices.css">
+    <link rel="stylesheet" href="./src/contact.css">
 
   </head>
   <body>
@@ -30,13 +31,13 @@
           <div class="img">
             <div class="line1 line"></div>
             <div class="line2 line"></div>
-            <img src="public/profile.svg" alt="">
+            <img src="public/profile.jpg" alt="">
             <div class="line3 line"></div>
             <div class="line4 line"></div>
           </div>
           <div class="about-me-container">
             <h2>Hi! My Name Is Joshua Malonzo. Tipan,</h2>
-            <p>Im a good person who loves to code, and i'm good at these ↓</p>
+            <p>Im a good person who loves to code, and i'm good at these <b class="arrow-down">↓</b></p>
             <div class="tech">
               <div title="Html">
                 <img class="tech1" src="public/html-5.png" alt="" srcset="">
@@ -61,17 +62,17 @@
         </div>
       </section>
       <section id="My Services" class="My-services">
-        <div class="h2">
-          <h2>My Services</h2>
+        <div class="myservices">
+            <!---->
         </div>
         <div class="services-container">
-          <div class="front-end">
-            <h2>Front end</h2>
+          <div class="front-end ">
+            <div class="frontend"></div>
             <p><b>User Interface (UI) Development:</b> Creating intuitive, engaging, and modern user interfaces.</p>
             <p><b>Responsive Web Design:</b>Ensuring applications look and function perfectly across all devices (desktops, tablets, and mobiles).</p>
           </div>
           <div class="back-end">
-            <h2>Back end</h2>
+            <div class="backend"></div>
             <p><b>API Development & Integration:</b>Building secure and scalable application programming interfaces.</p>
             <p><b>Server-Side Logic:</b>Developing the core business logic and functionality of the application.</p>
             <p><b>Authentication & Security:</b>Implementing robust user authentication and data protection mechanisms.</p>
@@ -79,10 +80,23 @@
         </div>
       </section>
       <section id="Contact">
-
+        <section class="logo-container">
+          <a href="https://github.com/JMalonzoTipan?tab=repositories" target="_blank"><img src="./public/github.png" alt="github"></a>
+          <a href="https://www.facebook.com/joshua.tipan.9" target="_blank"><img src="./public/facebook.png" alt="facebook"></a>
+        </section>
+        <section class="gmail-container">
+          <form id="form" action="">
+            <input type="email" placeholder="G-mail">
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Company Name">
+            <input type="text" placeholder="Message">
+            <input id="submit-btn" type="submit">
+          </form>
+        </section>
       </section>
     </main>
     <script src="./src/script.js"></script>
-  
+    <script src="./src/customBorder.js"></script>
+    <script src="src/scrollDrivenAnimation.js"></script>
   </body>
 </html>

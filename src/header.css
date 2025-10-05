@@ -41,15 +41,18 @@
     color: white;
     padding: 10px 15px 10px 15px;
 }
+
 /* initial animation for nav buttons */
 .nav-item1 > a{
     animation: initialAnimationNav 0.5s;
 }
 .nav-item2 > a{
     animation: initialAnimationNav 1s;
+    margin-top: 10px;
 }
 .nav-item3 > a{
     animation: initialAnimationNav 1.5s ;
+    margin-top: 20px;
 }
 .navlist-item > a:hover{
     background-color: var(--accent-color);
@@ -93,6 +96,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .nav-item2 > a{
+        margin-top: 0;
+    }
+    .nav-item3 > a{
+        margin-top: 0;
     }
 }
 

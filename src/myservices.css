@@ -3,7 +3,10 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 15% 1fr;
+    grid-template-rows:25% 1fr;
+    opacity: 0.4;
+    animation: showContent 0.5s forwards;
+    animation-timeline: view();
 }
 
 .My-services > .h2{
@@ -17,26 +20,74 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: start;
     gap: 20px;
+    overflow-x: hidden;
 }
+.services-container p{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+
 .front-end{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.front-end > :nth-child(2){
+    transform: translateX(-120%);
+}
+.front-end > :nth-child(3){
+    transform: translateX(120%);
 }
 .back-end{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.services-container :nth-child(1n) :not(h2, b){
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 10px;
+.back-end > :nth-child(2){
+    transform: translateX(-120%);
+}
+.back-end > :nth-child(3){
+    transform: translateX(120%);
+}
+.back-end > :nth-child(4){
+    transform: translateX(-120%);
 }
 
+@keyframes showContent {
+    to{
+        opacity: 1;
+    }
+}
+@keyframes deleteTranslate {
+    to{
+        transform: translate(0);
+    }
+}
 @media all and (min-width: 640px) {
     .services-container{
         flex-direction: row;
+    }
+}
+
+@media all and (min-width: 640px) {
+    .front-end > :nth-child(2){
+        transform: translateX(0);
+    }
+    .front-end > :nth-child(3){
+        transform: translateX(0);
+    }
+    .back-end > :nth-child(2){
+    transform: translateX(0);
+    }
+    .back-end > :nth-child(3){
+        transform: translateX(0);
+    }
+    .back-end > :nth-child(4){
+        transform: translateX(-0);
     }
 }
