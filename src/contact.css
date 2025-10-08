@@ -35,7 +35,7 @@
 }
 .gmail-container > form{
     position: relative;
-    width: 90%;
+    width: 80%;
     height: 100%;
     border-radius: 20px;
     border: 5px solid var(--accent-color);
@@ -99,6 +99,13 @@
     border: 5px solid rgb(253, 2, 253);
     border-radius: 5px;
 }
+.contact-logo{
+    transition: 0.5s;
+}
+.contact-logo:hover{
+    transform: scale(1.2);
+}
+
 @media all and (min-width: 640px) {
     .gmail-container > form{
         max-width: 600px;
